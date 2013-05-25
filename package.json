@@ -1,0 +1,51 @@
+{
+  "name": "json-globals",
+  "version": "0.1.0",
+  "description": "Embed JSON in a page as temporary global data",
+  "keywords": [],
+  "author": "Raynos <raynos2@gmail.com>",
+  "repository": "git://github.com/Colingo/json-globals.git",
+  "main": "index",
+  "homepage": "https://github.com/Colingo/json-globals",
+  "contributors": [
+    {
+      "name": "Raynos"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/Colingo/json-globals/issues",
+    "email": "raynos2@gmail.com"
+  },
+  "dependencies": {
+    "global": "~2.0.1"
+  },
+  "devDependencies": {
+    "tape": "~1.0.2"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/Colingo/json-globals/raw/master/LICENSE"
+    }
+  ],
+  "scripts": {
+    "test": "node ./test/index.js"
+  },
+  "testling": {
+    "files": "test/index.js",
+    "browsers": [
+      "ie/8..latest",
+      "firefox/16..latest",
+      "firefox/nightly",
+      "chrome/22..latest",
+      "chrome/canary",
+      "opera/12..latest",
+      "opera/next",
+      "safari/5.1..latest",
+      "ipad/6.0..latest",
+      "iphone/6.0..latest",
+      "android-browser/4.2..latest"
+    ]
+  },
+  "private": true
+}
