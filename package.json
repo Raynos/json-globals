@@ -1,6 +1,6 @@
 {
   "name": "json-globals",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Embed JSON in a page as temporary global data",
   "keywords": [],
   "author": "Raynos <raynos2@gmail.com>",
