@@ -9,12 +9,12 @@ function JSONGlobals(hash, value) {
 
     var payload =
         "if (!window.__JSON_GLOBALS_) {\n" +
-        "   window.__JSON_GLOBALS_ = {}\n" +
-        "}\n" +
+        "    window.__JSON_GLOBALS_ = {}\n" +
+        "}\n"
 
     Object.keys(hash).forEach(function (key) {
-        payload += "window.__JSON_GLOBALS_." + key + " = " +
-            JSON.stringify(hash[key], null, "    ") + "\n"
+        payload += "window.__JSON_GLOBALS_[" + JSON.stringify(key) +
+            "] = " + JSON.stringify(hash[key], null, "    ") + "\n"
     })
 
     return payload

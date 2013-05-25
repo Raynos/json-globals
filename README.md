@@ -2,14 +2,33 @@
 
 [![build status][1]][2] [![dependency status][3]][4]
 
-[![browser support][5]][6]
+<!-- [![browser support][5]][6] -->
 
 Embed JSON in a page as temporary global data
 
-## Example
+## Example for the server
 
 ```js
+var JSONGlobals = require("json-globals")
 
+function (req, res) {
+    getUser(req, res, function (userRecord) {
+        var text = JSONGlobals({ user: userRecord })
+        var html = "" // whatever html
+
+        html += "<script>" + text + "</script>"
+
+        res.end(html)
+    })
+}
+```
+
+## Example for the client
+
+```js
+var JSONGlobals = require("json-globals/get")
+
+var user = JSONGlobals("user")
 ```
 
 ## Installation
