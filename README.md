@@ -41,9 +41,9 @@ var user = JSONGlobals("user")
 
 ## MIT Licenced
 
-  [1]: https://secure.travis-ci.org/Colingo/json-globals.png
-  [2]: https://travis-ci.org/Colingo/json-globals
-  [3]: https://david-dm.org/Colingo/json-globals.png
-  [4]: https://david-dm.org/Colingo/json-globals
-  [5]: https://ci.testling.com/Colingo/json-globals.png
-  [6]: https://ci.testling.com/Colingo/json-globals
+  [1]: https://secure.travis-ci.org/Raynos/json-globals.png
+  [2]: https://travis-ci.org/Raynos/json-globals
+  [3]: https://david-dm.org/Raynos/json-globals.png
+  [4]: https://david-dm.org/Raynos/json-globals
+  [5]: https://ci.testling.com/Raynos/json-globals.png
+  [6]: https://ci.testling.com/Raynos/json-globals
