@@ -1,3 +1,5 @@
+var serializeJavascript = require('serialize-javascript')
+
 module.exports = JSONGlobals
 
 function JSONGlobals(hash, value) {
@@ -13,8 +15,8 @@ function JSONGlobals(hash, value) {
         "}\n"
 
     Object.keys(hash).forEach(function (key) {
-        payload += "window.__JSON_GLOBALS_[" + JSON.stringify(key) +
-            "] = " + JSON.stringify(hash[key], null, "    ") + "\n"
+        payload += "window.__JSON_GLOBALS_[" + serializeJavascript(key) +
+            "] = " + serializeJavascript(hash[key]) + "\n"
     })
 
     return payload
