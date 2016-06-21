@@ -4,8 +4,7 @@
 
 <!-- [![browser support][5]][6] -->
 
-Safely embed serialized javascript or JSON in a page as temporary global data.
-RegExp objects are properly serialized and HTML tags are sanitized.
+Safely embed serialized JSON in a page as temporary global data. HTML tags are sanitized.
 
 ## Example for the server
 
@@ -14,14 +13,14 @@ var JSONGlobals = require("safe-json-globals")
 
 function (req, res) {
     getUser(req, res, function (userRecord) {
-        var text = JSONGlobals({
+        var globalsMarkup = JSONGlobals({
           user: userRecord,
           potentialMaliciousContent: "</script><script>alert('hack')"
         })
 
         var html = "" // whatever html
 
-        html += "<script>" + text + "</script>"
+        html += globalsMarkup
 
         res.end(html)
     })
