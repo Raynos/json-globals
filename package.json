@@ -5,7 +5,8 @@
   "keywords": [],
   "author": "Raynos <raynos2@gmail.com>",
   "repository": "git://github.com/lxe/safe-json-globals.git",
-  "main": "index",
+  "main": "index.js",
+  "browser": "browser.js",
   "homepage": "https://github.com/lxe/safe-json-globals",
   "contributors": [
     {
@@ -21,7 +22,6 @@
     "email": "lxe@lxe.co"
   },
   "dependencies": {
-    "global": "~4.3.0",
     "serialize-javascript": "^1.1.2"
   },
   "devDependencies": {

@@ -1,5 +1,3 @@
-var document = require("global/document");
-
 module.exports = getJSONGlobal;
 
 var globals;
