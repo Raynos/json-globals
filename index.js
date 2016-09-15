@@ -9,15 +9,9 @@ function JSONGlobals(hash, value) {
         hash[key] = value
     }
 
-    var payload =
-        "if (!window.__JSON_GLOBALS_) {\n" +
-        "    window.__JSON_GLOBALS_ = {}\n" +
-        "}\n"
-
-    Object.keys(hash).forEach(function (key) {
-        payload += "window.__JSON_GLOBALS_[" + serializeJavascript(key) +
-            "] = " + serializeJavascript(hash[key]) + "\n"
-    })
+    var payload = '<script id="json-globals" type="application/json">';
+    payload += serializeJavascript(hash);
+    payload += '</script>';
 
     return payload
 }

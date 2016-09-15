@@ -1,8 +1,10 @@
-var window = require("global/window")
+module.exports = getJSONGlobal;
 
-module.exports = getJSONGlobal
-
+var globals;
 function getJSONGlobal(key) {
-    var globals = window.__JSON_GLOBALS_ || {}
-    return globals[key]
+    if (!globals) {
+      var jsonGlobalsElement = document.getElementById('json-globals');
+      globals = JSON.parse(jsonGlobalsElement.textContent);
+    }
+    return globals[key];
 }
